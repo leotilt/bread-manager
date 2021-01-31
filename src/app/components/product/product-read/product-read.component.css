@@ -1,0 +1,15 @@
+
+.edit{
+    margin-right: 10px;
+}
+
+.edit > i {
+    color:#2715c5 
+}
+.delete > i {
+    color:#e35e6b
+}
+
+.delete:hover{
+    cursor: pointer;
+}

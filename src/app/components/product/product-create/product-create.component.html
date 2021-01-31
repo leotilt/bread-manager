@@ -1,0 +1,72 @@
+<div class="submit-form">
+    <div *ngIf="!submitted">
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    <form>
+            <mat-form-field>
+                   <input matInput 
+                   type="text" 
+                   placeholder="Nome"
+                   [(ngModel)]="product.title"
+                   name="title"
+                   >
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput 
+                type="text" 
+                placeholder="Descrição"
+                [(ngModel)]="product.description"
+                name="description"
+                >
+         </mat-form-field>
+         <mat-form-field>
+            <input matInput 
+            type="text" 
+            placeholder="Quantidade"
+            [(ngModel)]="product.quantity"
+            name="description"
+            >
+     </mat-form-field>
+     
+     <mat-form-field>
+        <input matInput 
+        type="number" 
+        placeholder="Preço (R$)"
+        [(ngModel)]="product.price "
+        name="price"
+        >
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput 
+        type="number" 
+        placeholder="Código de Barras"
+        [(ngModel)]="product.barCode"
+        name="barCode"
+        >
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput 
+        type="date" 
+        placeholder="Validade"
+        [(ngModel)]="product.validate"
+        name="validate"
+        >
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+            <mat-label>Selecione a Filial</mat-label>
+            <mat-select [(ngModel)]="product.banch" type="text" name="banch">
+              <mat-option value="PindamonhangabaCG">PindamonhangabaCG</mat-option>
+              <mat-option value="Pindamonhangaba-Centro">Pindamonhangaba-Centro</mat-option>
+              <mat-option value="Taubate">Taubaté</mat-option>
+              <mat-option value="Guaratingueta">Guaratinguetá</mat-option>
+            </mat-select>
+          </mat-form-field>
+     </form>
+    <button mat-raised-button (click)="createProduct() " color="primary"
+    >Salvar</button>
+    <button mat-raised-button  (click)="cancel()"
+    >Cancelar</button>
+</mat-card>
+ </div>
+</div>
+

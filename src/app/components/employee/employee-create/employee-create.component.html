@@ -1,0 +1,39 @@
+<div class="submit-form">
+    <div *ngIf="!submitted">
+<mat-card>
+    <mat-card-title>Novo Funcionario</mat-card-title>
+    <form>
+            <mat-form-field>
+                   <input matInput 
+                   type="text" 
+                   placeholder="Nome"
+                   [(ngModel)]="employee.name"
+                   name="name"
+                   >
+            </mat-form-field>
+            <mat-form-field appearance="fill" >
+            <mat-label>Carga Horaria </mat-label>
+            <mat-select [(ngModel)]="employee.workTime" type="text" name="banch">
+              <mat-option value="6:00 as 14:00">6:00 as 14:00</mat-option>
+              <mat-option value="14:00 as 22:00">14:00 as 22:00</mat-option>
+            </mat-select>
+           </mat-form-field>
+
+            <mat-form-field appearance="fill" >
+            <mat-label>Selecione a Filial</mat-label>
+            <mat-select [(ngModel)]="employee.banch2" type="text" name="banch2">
+              <mat-option value="PindamonhangabaCG">PindamonhangabaCG</mat-option>
+              <mat-option value="Pindamonhangaba-Centro">Pindamonhangaba-Centro</mat-option>
+              <mat-option value="Taubate">Taubaté</mat-option>
+              <mat-option value="Guaratingueta">Guaratinguetá</mat-option>
+            </mat-select>
+          </mat-form-field>
+     </form>
+    <button mat-raised-button (click)="createEmployee() " color="primary"
+    >Salvar</button>
+    <button mat-raised-button  (click)="cancel()"
+    >Cancelar</button>
+</mat-card>
+ </div>
+</div>
+

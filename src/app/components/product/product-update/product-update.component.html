@@ -1,0 +1,72 @@
+<div class="edit-form">
+    <div>
+<mat-card>
+    <mat-card-title>Editar Produto (not work)</mat-card-title>
+    <form>
+            <mat-form-field>
+                   <input matInput 
+                   type="text" 
+                   placeholder="Nome"
+              
+                   name="title"
+                   >
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput 
+                type="text" 
+                placeholder="Descrição"
+             
+                name="description"
+                >
+         </mat-form-field>
+         <mat-form-field>
+            <input matInput 
+            type="text" 
+            placeholder="Quantidade"
+            
+            name="description"
+            >
+     </mat-form-field>
+     
+     <mat-form-field>
+        <input matInput 
+        type="number" 
+        placeholder="Preço (R$)"
+   
+        name="price"
+        >
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput 
+        type="number" 
+        placeholder="Código de Barras"
+      
+        name="barCode"
+        >
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput 
+        type="date" 
+        placeholder="Validade"
+       
+        name="validate"
+        >
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+            <mat-label>Selecione a Filial</mat-label>
+            <mat-select  type="text" name="banch">
+              <mat-option value="PindamonhangabaCG">PindamonhangabaCG</mat-option>
+              <mat-option value="Pindamonhangaba-Centro">Pindamonhangaba-Centro</mat-option>
+              <mat-option value="Taubate">Taubaté</mat-option>
+              <mat-option value="Guaratingueta">Guaratinguetá</mat-option>
+            </mat-select>
+          </mat-form-field>
+     </form>
+    <button mat-raised-button   color="primary"
+    >Salvar</button>
+    <button mat-raised-button  (click)="cancel()"
+    >Cancelar</button>
+</mat-card>
+ </div>
+</div>
+
